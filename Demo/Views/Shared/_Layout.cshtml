@@ -1,0 +1,31 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <center>
+            @* @Html.ActionLink("Home", "Index", "Home", new { id = 10 }, new { @class = "btn btn-primary" })*@
+        <a class="btn btn-primary" asp-action="index" asp-controller="home" asp-route-id="10">home</a>
+        <a class="btn btn-warning" href="/home/Privacy">privacy</a>
+        <a class="btn btn-success" href="/home/AboutUs">AboutUs</a>
+        <a class="btn btn-danger" href="/home/ContactUs">ContactUs</a>
+           <a class="btn btn-dark" href="/Accounts/Login">Login</a>
+        </center>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="fixed-bottom">
+        <center>
+            <p>copyrights</p>
+        </center>
+
+    </footer>
+</body>
+</html>
